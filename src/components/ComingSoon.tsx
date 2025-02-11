@@ -1,6 +1,11 @@
 import { SparklesCore } from './ui/sparkles';
+import { useEffect } from 'react';
 
 const ComingSoon = () => {
+  useEffect(() => {
+    console.log('ComingSoon component mounted');
+  }, []);
+
   return (
     <div className="h-screen relative w-full bg-slate-950 flex flex-col items-center justify-center overflow-hidden">
       <div className="w-full absolute inset-0 h-screen">
