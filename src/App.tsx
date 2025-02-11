@@ -1,4 +1,4 @@
-import React, { ErrorBoundary } from 'react';
+import React from 'react';
 import ComingSoon from './components/ComingSoon';
 
 class ErrorFallback extends React.Component<{ error: Error }> {
@@ -20,6 +20,10 @@ class AppErrorBoundary extends React.Component<{ children: React.ReactNode }, { 
 
   static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
   }
 
   render() {
