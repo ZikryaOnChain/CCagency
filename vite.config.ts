@@ -12,8 +12,13 @@ export default defineConfig({
         main: './index.html',
       },
     },
+    minify: 'esbuild',
+    cssMinify: true
   },
   server: {
     port: 3000,
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  }
 })

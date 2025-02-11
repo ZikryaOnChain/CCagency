@@ -1,5 +1,5 @@
 import React from 'react';
-import ComingSoon from './components/ComingSoon.tsx';
+import ComingSoon from './components/ComingSoon';
 
 const App: React.FC = () => {
   return (
